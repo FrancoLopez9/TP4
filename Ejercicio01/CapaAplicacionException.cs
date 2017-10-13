@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
-    class CapaAplicacionException : ApplicationException
+    public class CapaAplicacionException : ApplicationException
     {
+        //Atributos
+        private DateTime iFecha;
+
+        //Constructor
+        public CapaAplicacionException(string pMensaje, DateTime pFecha) : base(pMensaje)
+        {
+            iFecha = pFecha;
+        }
+
+        public DateTime Fecha
+        {
+            get { return this.iFecha; }
+        }
     }
 }
+
