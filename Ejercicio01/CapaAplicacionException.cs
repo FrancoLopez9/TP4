@@ -6,20 +6,33 @@ using System.Threading.Tasks;
 
 namespace Ejercicio01
 {
+    /// <summary>
+    /// Clase que representa la excepcion tratada en la capa de aplicacion
+    /// </summary>
     public class CapaAplicacionException : ApplicationException
     {
-        //Atributos
-        private DateTime iFecha;
+        private DateTime iFechaErrorAplicacion;
+        private DateTime iFechaErrorPuntual;
 
-        //Constructor
-        public CapaAplicacionException(string pMensaje, DateTime pFecha) : base(pMensaje)
+        /// <summary>
+        /// Crea una excepcion propia de la Capa de Aplicacion
+        /// </summary>
+        /// <param name="message"> mensaje de la Excepcion</param>
+        /// <param name="pFechaErrorAplicacion"> fecha en que se produce la Excepcion</param>
+        /// <param name="pFechaErrorPuntual"> fecha en la que se habia producido el Error puntual propagado</param>
+        public CapaAplicacionException(string message, DateTime pFechaErrorAplicacion, DateTime pFechaErrorPuntual) : base(message)
         {
-            iFecha = pFecha;
+            this.iFechaErrorAplicacion = pFechaErrorAplicacion;
+            this.iFechaErrorPuntual = pFechaErrorPuntual;
         }
 
-        public DateTime Fecha
+        public DateTime FechaErrorAplicacion
         {
-            get { return this.iFecha; }
+            get { return this.iFechaErrorAplicacion; }
+        }
+        public DateTime FechaErrorPuntual
+        {
+            get { return this.iFechaErrorPuntual; }
         }
     }
 }

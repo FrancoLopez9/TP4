@@ -10,7 +10,9 @@ namespace Ejercicio01
     {
         static void Main(string[] args)
         {
-
+            CapaVista pCapaVista = new CapaVista();
+            pCapaVista.Ejecutar();
+            Console.ReadKey();
         }
     }
 }
