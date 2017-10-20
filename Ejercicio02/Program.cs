@@ -10,6 +10,10 @@ namespace Ejercicio02
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Ingrese el valor del Dividendo: ");
+            int pDividendo = System.Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Ingrese el valor del Divisor: ");
+            int pDivisor = System.Convert.ToInt16(Console.ReadLine());
         }
     }
 }
