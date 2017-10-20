@@ -6,21 +6,31 @@ using System.Threading.Tasks;
 
 namespace Ejercicio02
 {
+    /// <summary>
+    /// Esta clase representa el controlador de fachada
+    /// </summary>
     class Fachada
     {
-        public Dividir()
+       /// <summary>
+       /// Este metodo realiza la division de numeros enteros
+       /// </summary>
+       /// <param name="pDividendo">Este parametro representa al numero dividendo</param>
+       /// <param name="pDivisor">Este parametro representa al numero divisor</param>
+       public void Dividir(int pDividendo, int pDivisor)
         {
-            Console.WriteLine("Ingrese el valor del Dividendo: ");
-            int pDividendo = System.Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Ingrese el valor del Divisor: ");
-            int pDivisor = System.Convert.ToInt16(Console.ReadLine());
             Matematica pMatematica = new Matematica();
             try
             {
                 double pResultado = pMatematica.Dividir(pDividendo, pDivisor);
                 Console.WriteLine("El resultado es: " + pResultado);
+
             }
-            catch ()
+            catch (DivisionPorCeroException pException)
+            {
+                Console.WriteLine(pException.Message);
+                Console.WriteLine(pException.StackTrace);
+            }
+            
         }
     }
 }
