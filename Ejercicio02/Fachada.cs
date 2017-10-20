@@ -8,7 +8,6 @@ namespace Ejercicio02
 {
     class Fachada
     {
-        //borrar este comentario
         public Dividir()
         {
             Console.WriteLine("Ingrese el valor del Dividendo: ");
@@ -19,9 +18,9 @@ namespace Ejercicio02
             try
             {
                 double pResultado = pMatematica.Dividir(pDividendo, pDivisor);
-                con
+                Console.WriteLine("El resultado es: " + pResultado);
             }
-            catch
+            catch ()
         }
     }
 }
