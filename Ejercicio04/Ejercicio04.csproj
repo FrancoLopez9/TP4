@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComparadorPorCodigo.cs" />
+    <Compile Include="ComparadorPorCorreoElectronico.cs" />
+    <Compile Include="ComparadorPorNombre.cs" />
     <Compile Include="IRepositorioUsuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

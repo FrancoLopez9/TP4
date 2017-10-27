@@ -38,7 +38,9 @@ namespace Ejercicio04
 
         public IList<Usuario> ObtenerOrdenadosPor(IComparer<Usuario> pComparador)
         {
-
+            List<Usuario> pLista = new List<Usuario>();
+            pLista.Sort(pComparador);
+            return pLista;
         }
     }
 }
