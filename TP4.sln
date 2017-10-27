@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio01", "Ejercicio01\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio02", "Ejercicio02\Ejercicio02.csproj", "{9259BB5A-F065-4E07-B208-7EC57BDC4037}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejericicio03", "Ejericicio03\Ejericicio03.csproj", "{E9588F32-2571-43EA-9827-0DD965DC8445}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio03", "Ejericicio03\Ejercicio03.csproj", "{E9588F32-2571-43EA-9827-0DD965DC8445}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejercicio04", "Ejercicio04\Ejercicio04.csproj", "{EC64D9D6-060C-473A-B002-6E06848FFF09}"
 EndProject
