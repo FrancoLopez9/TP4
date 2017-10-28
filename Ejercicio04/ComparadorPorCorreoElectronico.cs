@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio04
 {
-    class ComparadorPorCorreoElectronico : IComparer<Usuario>
+    /// <summary>
+    /// Clase que representa un comparador que ordena segun el correo del electronico del usuario.
+    /// </summary>
+    public class ComparadorPorCorreoElectronico : IComparer<Usuario>
     {
         public int Compare(Usuario pUsuario1, Usuario pUsuario2)
         {

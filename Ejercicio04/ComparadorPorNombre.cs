@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio04
 {
-    class ComparadorPorNombre : IComparer<Usuario>
+    /// <summary>
+    /// Clase que representa un comparador que ordena segun el nombre completo del usuario.
+    /// </summary>
+    public class ComparadorPorNombre : IComparer<Usuario>
     {
         public int Compare(Usuario pUsuario1, Usuario pUsuario2)
         {

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio04
 {
-    class ComparadorPorCodigo : IComparer<Usuario>
+    /// <summary>
+    /// Clase que representa un comparador que ordena segun el codigo del usuario.
+    /// </summary>
+    public class ComparadorPorCodigo : IComparer<Usuario>
     {
         public int Compare(Usuario pUsuario1, Usuario pUsuario2)
         {

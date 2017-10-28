@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio04
 {
+    /// <summary>
+    /// Interfaz que representa el repositorio de usuarios.
+    /// </summary>
     interface IRepositorioUsuarios
     {
         void Agregar(Usuario pUsuario);

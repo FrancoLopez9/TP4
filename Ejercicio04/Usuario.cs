@@ -6,12 +6,32 @@ using System.Threading.Tasks;
 
 namespace Ejercicio04
 {
-    class Usuario
+    /// <summary>
+    /// Clase que representa un Usuario.
+    /// </summary>
+    public class Usuario
     {
+        //Atributos
         private String iCodigo;
         private String iNombreCompleto;
         private String iCorreoElectronico;
 
+       
+        public Usuario() { }
+        /// <summary>
+        /// Crea un usuario a partir del codigo, nombre completo y correo electronico.
+        /// </summary>
+        /// <param name="pCodigo"></param>
+        /// <param name="pNombreCompleto"></param>
+        /// <param name="pCorreoElectronico"></param>
+        public Usuario (String pCodigo, String pNombreCompleto, String pCorreoElectronico)
+        {
+            this.iCodigo = pCodigo;
+            this.iNombreCompleto = pNombreCompleto;
+            this.iCorreoElectronico = pCorreoElectronico;
+        }
+
+        //Propiedades
         public String Codigo
         {
             get { return this.iCodigo; }
