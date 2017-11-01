@@ -60,5 +60,10 @@ namespace Ejercicio05
             return (pUsuario != null)
                 && (Codigo == pUsuario.Codigo);
         }
+
+        public override int GetHashCode()
+        {
+            return iCodigo.GetHashCode();
+        }
     }
 }
