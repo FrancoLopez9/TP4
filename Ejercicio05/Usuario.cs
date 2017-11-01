@@ -31,6 +31,11 @@ namespace Ejercicio05
             this.iCorreoElectronico = pCorreoElectronico;
         }
 
+        public Usuario(String pCodigo)
+        {
+            this.iCodigo = pCodigo;
+        }
+
         //Propiedades
         public String Codigo
         {

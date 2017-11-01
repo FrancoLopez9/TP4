@@ -25,7 +25,14 @@ namespace Ejercicio05
         /// <param name="pUsuario">Usuario a agregar</param>
         public void Agregar(Usuario pUsuario)
         {
-            iLista.Add(pUsuario);
+            if (iLista.Contains(pUsuario))
+            {
+                throw new otra excepcion
+            }
+            else
+            {
+                iLista.Add(pUsuario);
+            }
         }
 
         /// <summary>
@@ -34,8 +41,15 @@ namespace Ejercicio05
         /// <param name="pCodigo">Codigo del Usuario a eliminar</param>
         public void Eliminar(String pCodigo)
         {
-            iLista.get
-            iDiccionario.Remove(pCodigo);
+            if (iLista.Contains(new Usuario (pCodigo)))
+            {
+                iLista.Remove(new Usuario(pCodigo));
+            }
+            else
+            {
+                throw new excepcion que sea;                
+            }
+            
         }
 
         /// <summary>
@@ -44,7 +58,16 @@ namespace Ejercicio05
         /// <param name="pUsuario">Usuario a actualizar</param>
         public void Actualizar(Usuario pUsuario)
         {
-            iDiccionario[pUsuario.Codigo] = pUsuario;
+            if (iLista.Contains(pUsuario))
+            {
+                int index = iLista.IndexOf(pUsuario);
+                iLista[index] = pUsuario;
+            }
+            
+            else
+            {
+                excepcion o agregarlo ???
+            }
 
         }
 
@@ -54,7 +77,7 @@ namespace Ejercicio05
         /// <returns></returns>
         public IList<Usuario> ObtenerTodos()
         {
-            return new List<Usuario>(iDiccionario.Values);
+            return iLista;
         }
 
         /// <summary>
@@ -64,7 +87,15 @@ namespace Ejercicio05
         /// <returns></returns>
         public Usuario ObtenerPorCodigo(String pCodigo)
         {
-            return iDiccionario[pCodigo];
+            if (iLista.Contains(new Usuario(pCodigo)))
+            {
+                int index = iLista.IndexOf(new Usuario(pCodigo));
+                return iLista.ElementAt(index);
+            }
+            else
+            {
+                throw new excepcion que sea
+            }
         }
 
         /// <summary>
@@ -74,7 +105,7 @@ namespace Ejercicio05
         /// <returns></returns>
         public IList<Usuario> ObtenerOrdenadosPor(IComparer<Usuario> pComparador)
         {
-            List<Usuario> pLista = new List<Usuario>(Diccionario.Values);
+            List<Usuario> pLista = iLista.ToList();            
             pLista.Sort(pComparador);
             return pLista;
         }
