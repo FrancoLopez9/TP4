@@ -1,16 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Ejercicio04;
 
-namespace PruebaEjercicio03
+using Ejercicio05;
+
+
+namespace PruebaEjercicio05
 {
     [TestClass]
-    public class UnitTest3
+    public class TestOrdenarPorCorreo_ej5
     {
         [TestMethod]
-        public void TestOrdenarPorCodigo()
-
+        public void TestOrdenarPorCorreoElectronico_5()
         {
             Usuario usuario1 = new Usuario("A30", "Carlito", "altocarl@gmail.com");
             Usuario usuario2 = new Usuario("A10", "Lili", "megalili@gmail.com");
@@ -21,14 +22,14 @@ namespace PruebaEjercicio03
 
             RepositorioUsuarios repo = new RepositorioUsuarios();
 
-            ComparadorPorCodigo comparador = new ComparadorPorCodigo();
+            ComparadorPorCorreoElectronico comparador = new ComparadorPorCorreoElectronico();
 
             IList<Usuario> listita = new List<Usuario>();
 
-            listita.Add(usuario2);
             listita.Add(usuario1);
-            listita.Add(usuario3);
             listita.Add(usuario5);
+            listita.Add(usuario2);
+            listita.Add(usuario3);
             listita.Add(usuario4);
 
 

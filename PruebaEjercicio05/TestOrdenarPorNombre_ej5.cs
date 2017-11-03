@@ -2,15 +2,15 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
-using Ejercicio04;
+using Ejercicio05;
 
-namespace PruebaEjercicio03
+namespace PruebaEjercicio05
 {
     [TestClass]
-    public class UnitTest2
+    public class TestOrdenarPorNombre_ej5
     {
         [TestMethod]
-        public void TestOrdenarPorNombre()
+        public void TestOrdenarPorNombre_5()
         {
             Usuario usuario1 = new Usuario("A30", "Carlito", "altocarl@gmail.com");
             Usuario usuario2 = new Usuario("A10", "Lili", "megalili@gmail.com");
@@ -30,8 +30,8 @@ namespace PruebaEjercicio03
             listita.Add(usuario2);
             listita.Add(usuario3);
             listita.Add(usuario5);
-                
-                   
+
+
             repo.Agregar(usuario1);
             repo.Agregar(usuario2);
             repo.Agregar(usuario3);

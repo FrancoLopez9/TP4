@@ -109,5 +109,26 @@ namespace Ejercicio05
             pLista.Sort(pComparador);
             return pLista;
         }
+
+        /// <summary>
+        /// Metodo que obtiene los nombres completos de usuarios que contengan una subcadena que se le pasa como parametro.
+        /// </summary>
+        /// <param name="cadena"> Cadena a busacar </param>
+        /// <returns></returns>
+        public IList<Usuario> BusquedaAproxPorNombre (String cadena)
+        {
+            IList<Usuario> listaSalida = new List<Usuario>();
+            IEnumerator<Usuario> indiceLista = iLista.GetEnumerator();
+            while (indiceLista.MoveNext() == true)
+            {
+                if (indiceLista.Current.NombreCompleto.Contains(cadena))
+                {
+                    listaSalida.Add(indiceLista.Current);
+                }
+
+            }
+
+            return listaSalida;
+        }
     }
 }

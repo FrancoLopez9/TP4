@@ -1,15 +1,16 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+
 using Ejercicio04;
 
-namespace PruebaEjercicio03
+namespace PruebaEjercicio04
 {
     [TestClass]
-    public class UnitTest4
+    public class TestOrdenarPorNombre_ej4
     {
         [TestMethod]
-        public void TestOrdenarPorCorreoElectronico()
+        public void TestOrdenarPorNombre_4()
         {
             Usuario usuario1 = new Usuario("A30", "Carlito", "altocarl@gmail.com");
             Usuario usuario2 = new Usuario("A10", "Lili", "megalili@gmail.com");
@@ -20,17 +21,17 @@ namespace PruebaEjercicio03
 
             RepositorioUsuarios repo = new RepositorioUsuarios();
 
-            ComparadorPorCorreoElectronico comparador = new ComparadorPorCorreoElectronico();
+            ComparadorPorNombre comparador = new ComparadorPorNombre();
 
             IList<Usuario> listita = new List<Usuario>();
 
+            listita.Add(usuario4);
             listita.Add(usuario1);
-            listita.Add(usuario5);
             listita.Add(usuario2);
             listita.Add(usuario3);
-            listita.Add(usuario4);
-
-
+            listita.Add(usuario5);
+                
+                   
             repo.Agregar(usuario1);
             repo.Agregar(usuario2);
             repo.Agregar(usuario3);
