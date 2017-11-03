@@ -27,7 +27,7 @@ namespace Ejercicio05
         {
             if (iLista.Contains(pUsuario))
             {
-                throw new otra excepcion
+                throw new UsuarioExistenteException("El usuario ya existe");
             }
             else
             {
@@ -47,7 +47,7 @@ namespace Ejercicio05
             }
             else
             {
-                throw new excepcion que sea;                
+                throw new UsuarioInexistenteException("El usuario no existe");                
             }
             
         }
@@ -66,7 +66,7 @@ namespace Ejercicio05
             
             else
             {
-                excepcion o agregarlo ???
+                throw new UsuarioInexistenteException("El usuario no existe");
             }
 
         }
@@ -94,7 +94,7 @@ namespace Ejercicio05
             }
             else
             {
-                throw new excepcion que sea
+                throw new UsuarioInexistenteException("El usuario no existe");
             }
         }
 
