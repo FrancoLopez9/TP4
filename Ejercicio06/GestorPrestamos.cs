@@ -44,11 +44,10 @@ namespace Ejercicio06
 
         public bool EsValida(SolicitudPrestamo pSolicitud)
         {
-            //IEvaluador evaluador = this.iEvaluadoresPorCliente[pSolicitud.Cliente.TipoCliente];
+            IEvaluador evaluador = this.iEvaluadoresPorCliente[pSolicitud.Cliente.TipoCliente];
 
-            //return evaluador.EsValida(pSolicitud);
+            return evaluador.EsValida(pSolicitud);
 
-            return this.iEvaluadoresPorCliente[pSolicitud.Cliente.TipoCliente].EsValida(pSolicitud);
         }
 
     }

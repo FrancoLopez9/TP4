@@ -15,11 +15,13 @@ namespace Ejercicio06
 
         private int iCantidadCuotas;
 
+        
         public SolicitudPrestamo(Cliente pCliente, double pMonto, int pCantidadCoutas)
         {
             this.iCliente = pCliente;
             this.iMonto = pMonto;
             this.iCantidadCuotas = pCantidadCoutas;
+            
         }
 
         public Cliente Cliente { get { return this.iCliente; } }
@@ -28,5 +30,6 @@ namespace Ejercicio06
 
         public int CantidadCuotas { get { return this.iCantidadCuotas; } }
 
+      
     }
 }
