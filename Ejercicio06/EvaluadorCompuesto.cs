@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
+    /// <summary>
+    /// Clase que representa la evaluacion a un cliente segun distintas reglas
+    /// </summary>
     public class EvaluadorCompuesto : IEvaluador
     {
 
@@ -16,6 +19,11 @@ namespace Ejercicio06
             this.iEvaluadores = new List<IEvaluador>();
         }
 
+        /// <summary>
+        /// Metodo que valida al cliente segun las diferentes reglas
+        /// </summary>
+        /// <param name="pSolicitud"></param>
+        /// <returns></returns>
         public bool EsValida(SolicitudPrestamo pSolicitud)
         {
             bool esValida = true;
@@ -30,6 +38,10 @@ namespace Ejercicio06
             return esValida;
         }
 
+        /// <summary>
+        /// Metodo que agrega evaluadores nuevos
+        /// </summary>
+        /// <param name="pEvaluador"></param>
         public void AagregarEvaluador(IEvaluador pEvaluador)
         {
             this.iEvaluadores.Add(pEvaluador);

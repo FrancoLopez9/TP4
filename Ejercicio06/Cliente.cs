@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
+    /// <summary>
+    /// Clase que representa a un cliente
+    /// </summary>
     public class Cliente
     {
 
@@ -19,6 +22,14 @@ namespace Ejercicio06
 
         private Empleo iEmpleo;
 
+        /// <summary>
+        /// Constructor para el cliente a partir del nombre, apellido, fecha de nacimiento, tipo de cliente y empleo
+        /// </summary>
+        /// <param name="pNombre"> Nombre del cliente </param>
+        /// <param name="pApellido"> Apellido del cliente </param>
+        /// <param name="pFechaNacimiento"> Fecha de nacimiento del cliente </param>
+        /// <param name="pTipoCliente"> Tipo de cliente </param>
+        /// <param name="pEmpleo"> Empleo del cliente </param>
         public Cliente(String pNombre, String pApellido, DateTime pFechaNacimiento, TipoCliente pTipoCliente, Empleo pEmpleo)
         {
             this.iNombre = pNombre;

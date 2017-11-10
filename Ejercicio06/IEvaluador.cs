@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
+    /// <summary>
+    /// Interfaz que representa un evaluador
+    /// </summary>
     public interface IEvaluador
     {
 

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
+    /// <summary>
+    /// Clase que representa el empleo del cliente
+    /// </summary>
     public class Empleo
     {
 
@@ -13,6 +16,11 @@ namespace Ejercicio06
 
         private DateTime iFechaIngreso;
 
+        /// <summary>
+        /// Constructor del empleo a partir del sueldo y fecha de ingreso del cliente
+        /// </summary>
+        /// <param name="pSueldo"></param>
+        /// <param name="pFechaIngreso"></param>
         public Empleo(double pSueldo, DateTime pFechaIngreso)
         {
             this.iSueldo = pSueldo;

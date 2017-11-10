@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
+    /// <summary>
+    /// Enumeracion con los diferentes tipos de cliente
+    /// </summary>
     public enum TipoCliente
     {
         NoCliente,

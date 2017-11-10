@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
+    /// <summary>
+    /// Clase que representa una solicitud de prestamo
+    /// </summary>
     public class SolicitudPrestamo
     {
 
@@ -14,8 +17,13 @@ namespace Ejercicio06
         private double iMonto;
 
         private int iCantidadCuotas;
-
-        
+                
+        /// <summary>
+        /// Constructor de una solicitud de prestamo a partir de un cliente, monto y cantidad de cuotas
+        /// </summary>
+        /// <param name="pCliente"></param>
+        /// <param name="pMonto"></param>
+        /// <param name="pCantidadCoutas"></param>
         public SolicitudPrestamo(Cliente pCliente, double pMonto, int pCantidadCoutas)
         {
             this.iCliente = pCliente;

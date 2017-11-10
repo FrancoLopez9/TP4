@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio06
 {
-    class EvaluadorAntiguedadLaboral
+    /// <summary>
+    /// Clase que representa la evaluacion al cliente en base a su antiguedad laboral
+    /// </summary>
+    public class EvaluadorAntiguedadLaboral : IEvaluador
     {
         private int iAntiguedadMinima;
 
@@ -15,13 +18,19 @@ namespace Ejercicio06
             this.iAntiguedadMinima = pAntiguedadMinima;
         }
 
+        /// <summary>
+        /// Metodo que valida al cliente segun su antiguedad laboral
+        /// </summary>
+        /// <param name="pSolicitud"> Solicitud de prestamo del cliente </param>
+        /// <returns></returns>
         public bool EsValida(SolicitudPrestamo pSolicitud)
         {
             DateTime fechaActual = DateTime.Today;
             DateTime fechaIngreso = pSolicitud.Cliente.Empleo.FechaIngreso;
-            int antiguedad = fechaActual.Year - fechaIngreso.Year;
+            TimeSpan antiguedad = fechaActual.Subtract(fechaIngreso);
+            double meses = antiguedad.TotalDays / 30;
 
-            return antiguedad <= this.iAntiguedadMinima;
+            return meses >= this.iAntiguedadMinima;
         }
     }
 }
